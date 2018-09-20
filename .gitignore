@@ -1,3 +1,6 @@
+# Build library
+build
+
 # Prerequisites
 *.d
 
