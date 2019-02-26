@@ -13,10 +13,17 @@ Install OpenOCD with:
 brew install openocd
 ```
 
-Install GCC with:
+Install GCC with: (edit:see note below)
 ```
 brew cask install gcc-arm-embedded
 ```
+edit (February 26th, 2019): the 'gcc-arm-embedded' cask may be gone again. A work around was posted on
+https://github.com/Homebrew/homebrew-cask/pull/56802
+which is:
+```
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/b88346667547cc85f8f2cacb3dfe7b754c8afc8a/Casks/gcc-arm-embedded.rb
+```
+
 
 In Terminal change directory this folder and run ``sh openocd`` (alternatively ``./openocd``, but you might have to run ``chmod +x openocd`` first to give the openocd shellscript executive permissions first).
 Open another terminal window, same folder, and run ``make clean``. Then run ``make flash``.
